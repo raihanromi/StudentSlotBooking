@@ -52,7 +52,7 @@
 
 
 <!-- footer start -->
-<footer class="container-fluid bg-dark text-center p-2" style="position:fixed;bottom:0"><small class="text-white">Copyright &copy; 2022 || Designed By Group 8</small>
+<footer class="container-fluid bg-dark text-center p-2" style="position:fixed;bottom:0"><small class="text-white">Raihan Romeo</small>
 </footer>
 
 
