@@ -27,6 +27,8 @@
 </nav>
 <!-- end navbar -->
 
+
+
   <form action="Student/adduser.php" method="post">
           <div class="mb-3">
             <i class="fas fa-user"></i><lable for="stuname" class="pl-2 font-weight-bold">Name</lable><input type="text" class="form-control" placeholder="Name" name="stuname" required >
@@ -44,7 +46,7 @@
 		          name="role" 
 		          aria-label="Default select example">
 			  <option selected value="student">Student</option>
-			  <option value="faculty">Lecture</option>
+			  <option value="faculty">Lecturer</option>
 		  </select>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Sign UP</button>
@@ -56,4 +58,3 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
-
