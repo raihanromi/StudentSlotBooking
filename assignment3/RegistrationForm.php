@@ -29,9 +29,12 @@
 
 
 
-  <form action="Student/adduser.php" method="post">
+  <form action="Auth/adduser.php" method="post">
           <div class="mb-3">
             <i class="fas fa-user"></i><lable for="stuname" class="pl-2 font-weight-bold">Name</lable><input type="text" class="form-control" placeholder="Name" name="stuname" required >
+          </div>
+           <div class="mb-3">
+            <i class="fas fa-user"></i><lable for="stuname" class="pl-2 font-weight-bold">Firstname</lable><input type="text" class="form-control" placeholder="Firstname" name="Firstname" required >
           </div>
           <div class="mb-3">
             <i class="fas fa-envelope"></i><lable for="stuemail" class="pl-2 font-weight-bold">Email</lable><input type="email" class="form-control" placeholder="Email" name="stuemail" required >
@@ -50,7 +53,6 @@
 		  </select>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Sign UP</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
      
     </form>
