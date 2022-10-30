@@ -2,10 +2,10 @@
 session_start();
 include_once("../dbConnection.php");
 
-if (isset($_POST['stuLogemail']) && isset($_POST['stuLogpass'])) {
+if (isset($_POST['Logemail']) && isset($_POST['Logpass'])) {
 
-	$email =($_POST['stuLogemail']);
-	$pass =($_POST['stuLogpass']);
+	$email =($_POST['Logemail']);
+	$pass =($_POST['Logpass']);
 	$user=($_POST['role']);
 
 	if (empty($email)) {
@@ -14,37 +14,36 @@ if (isset($_POST['stuLogemail']) && isset($_POST['stuLogpass'])) {
 		header("Location: ../index.php?error=Password is Required");
 	}else {
         
-        $sql = "SELECT * FROM user WHERE email='$email' AND password='$pass'";
-        $result = $con->query($sql);
+        $sql = "SELECT * FROM user WHERE email='$email' AND pass='$pass'";
+        $result = $conn->query($sql);
 
         if (mysqli_num_rows($result) === 1) {
         	// the email must be unique
         	$row = mysqli_fetch_assoc($result);
-        	if ($row['password'] === $pass && $row['email'] == $email) {
+        	if ($row['pass'] === $pass && $row['email'] == $email) {
 				$_SESSION['is_login']=true;
 				$_SESSION['name'] = $row['name'];
         		$_SESSION['user_id'] = $row['user_id'];
         		$_SESSION['email'] = $row['email'];
 				$_SESSION['user_type'] = $row['user_type'];
 				if($row['user_type']=='student'){
-					header('location:../index.php');
+					header('location:../Student.php');
 				}else{
-					header('location:../faculty.php');
+					header('location:../Lecture.php');
 				}
-        	
-
-        		//header("Location: ../index.php");
-
+                
         	}else {
         		header("Location: ../index.php?error=Incorect User name or password");
 
         	}
         }else {
         	header("Location: ../index.php?error=Incorect User name or password");
+           
         }
 
 	}
 	
 }else {
 	header("Location: ../index.php");
+
  }

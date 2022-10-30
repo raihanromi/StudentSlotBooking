@@ -11,13 +11,15 @@ include_once("../dbConnection.php");
     $stuemail=$_POST['stuemail'];
     $stupass=$_POST['stupass'];
     $user_type=$_POST['role'];
-    $user_id=rand(100000,999999);
+    $user_id=$_POST['sid'];
    
 
-    $sql="INSERT INTO user(user_id,name,email,password,user_type) VALUES('$user_id','$stuname','$stuemail','$stupass','$user_type') ";
+    $sql="INSERT INTO user(sid,name,firstname,pass,email,user_type) VALUES('$user_id','$stuname','$firstname','$stupass','$stuemail','$user_type')";
 
-    $con->query($sql);
+    $conn->query($sql);
     header('location:../index.php');
+
+
 
  }
 
