@@ -54,6 +54,7 @@ if ($result->num_rows > 0) {
     
 ?>
 
+<a href='Signout.php'><button>Signout</button></a>
 
 </body>
 </html>

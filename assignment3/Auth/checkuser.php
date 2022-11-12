@@ -29,7 +29,7 @@ if (isset($_POST['Logemail']) && isset($_POST['Logpass'])) {
 				if($row['user_type']=='student'){
 					header('location:../Student.php');
 				}else{
-					header('location:../Lecture.php');
+					header('location:../Lecturer.php');
 				}
                 
         	}else {
