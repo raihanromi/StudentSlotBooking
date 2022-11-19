@@ -10,7 +10,7 @@ if(isset($_POST['search']))
     
 }
  else {
-    $query = "SELECT * FROM `user`";
+    $query = "SELECT * FROM `user` where user_type='student'";
     $search_result = filterTable($query);
 }
 
