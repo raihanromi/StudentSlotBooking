@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student dashboard</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <style>
+      select{
+        padding: 10px;
+        margin: 10px;
+      }
+     </style>
 </head>
 <body>
     
 <?php
+session_start();
 
-    session_start();
     include_once("dbConnection.php");
-    echo "<h2>student name: " .$_SESSION['name']."</h2>";
+    echo "<h2>Student Name: " .$_SESSION['name']."</h2>";
     echo "<br>";
 
 ?>
-
 <form action="Setslot.php" method="post">
     <label>Choose a slot:</label>
 
@@ -39,7 +45,7 @@ if ($result->num_rows > 0) {
 
 </select>
 
-<button type="submit" name="submit">Submit</button>
+<button class="btn btn-success" type="submit" name="submit">Submit</button>
 
 </form>
 
@@ -55,7 +61,7 @@ if ($result->num_rows > 0) {
     
 ?>
 
-<a href='Signout.php'><button>Signout</button></a>
+<a href='Signout.php' class="btn btn-danger">Signout</a>
 
 </body>
 </html>
