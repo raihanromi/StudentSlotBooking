@@ -17,7 +17,7 @@ include_once("../dbConnection.php");
     $sql="INSERT INTO user(sid,name,firstname,pass,email,user_type) VALUES('$user_id','$stuname','$firstname','$stupass','$stuemail','$user_type')";
 
     $conn->query($sql);
-    header('location:../index.php');
+    header('location:../LoginForm.php');
 
 
 
