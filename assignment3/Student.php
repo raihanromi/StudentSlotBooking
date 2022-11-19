@@ -46,7 +46,8 @@ if ($result->num_rows > 0) {
 
 <?php 
     include_once('dbConnection.php');
-    $sql="SELECT slot FROM user";
+    $email=$_SESSION['email'];
+    $sql="SELECT slot FROM user where email='$email'";
     $result=$conn->query($sql);
     $row = mysqli_fetch_assoc($result);
     $Stuslot=$row['slot'];
