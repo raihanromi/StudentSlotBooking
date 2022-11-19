@@ -32,7 +32,7 @@ Password: <input type="text" name="Logpass"><br>
 </form> -->
 
 
-<form action="Auth/checkuser.php" method="post">
+<form action="Auth/checkuser.php" method="post" style="margin:30px;">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" name="Logemail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
