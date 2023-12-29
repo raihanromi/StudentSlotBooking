@@ -18,7 +18,6 @@
     <title>Registration </title>
 </head>
 <body>
-<!--https://piazza.com/class_profile/get_resource/l8fcwp0qxsv615/l9l5vl8cfdf6f5 -->
 <!-- start navbar -->
 <nav class="navbar navbar-expand-sm navbar-light bg-light pl-5" >
   <div class="container-fluid">
